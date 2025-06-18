@@ -1,7 +1,12 @@
 User-agent: Googlebot
+Disallow: /music/
+Disallow: /category/
 Allow: /
 
 User-agent: Bingbot
+Disallow: /music/
+Disallow: /category/
+
 Allow: /
 
 User-agent: Twitterbot
@@ -11,4 +16,10 @@ User-agent: facebookexternalhit
 Allow: /
 
 User-agent: *
+Disallow: /music/
+Disallow: /category/
 Allow: /
+
+
+# Sitemaps
+Sitemap: https://evcarsbike.com/sitemap.xml
