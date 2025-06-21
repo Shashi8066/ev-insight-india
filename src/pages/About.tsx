@@ -1,11 +1,35 @@
-
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Target, Users, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>About EVCarsBike - Independent EV Platform for India | EVCarsBike</title>
+        <meta name="description" content="Learn about EVCarsBike - an independent educational platform for electric vehicle information in India. Our mission, values, and commitment to unbiased EV guidance." />
+        <meta name="keywords" content="about EVCarsBike, EV platform India, electric vehicle information, independent EV guide, EV education platform, electric car bike information" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About EVCarsBike - Independent EV Platform for India | EVCarsBike" />
+        <meta property="og:description" content="Learn about EVCarsBike - an independent educational platform for electric vehicle information in India. Our mission, values, and commitment to unbiased EV guidance." />
+        <meta property="og:url" content="https://evcarsbike.com/about" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About EVCarsBike - Independent EV Platform for India | EVCarsBike" />
+        <meta name="twitter:description" content="Learn about EVCarsBike - an independent educational platform for electric vehicle information in India. Our mission, values, and commitment to unbiased EV guidance." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">

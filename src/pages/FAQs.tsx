@@ -1,7 +1,7 @@
-
 import Layout from "@/components/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const FAQs = () => {
   const faqs = [
@@ -57,6 +57,30 @@ const FAQs = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Frequently Asked Questions - EVCarsBike | EV Platform FAQs</title>
+        <meta name="description" content="Frequently asked questions about EVCarsBike platform, tools, and services. Get answers about EV information, data accuracy, and platform usage." />
+        <meta name="keywords" content="EVCarsBike FAQ, electric vehicle questions, EV platform help, frequently asked questions, EV tools help, electric car FAQ" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/faqs" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Frequently Asked Questions - EVCarsBike | EV Platform FAQs" />
+        <meta property="og:description" content="Frequently asked questions about EVCarsBike platform, tools, and services. Get answers about EV information, data accuracy, and platform usage." />
+        <meta property="og:url" content="https://evcarsbike.com/faqs" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Frequently Asked Questions - EVCarsBike | EV Platform FAQs" />
+        <meta name="twitter:description" content="Frequently asked questions about EVCarsBike platform, tools, and services. Get answers about EV information, data accuracy, and platform usage." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">

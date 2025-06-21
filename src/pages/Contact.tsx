@@ -1,11 +1,35 @@
-
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MessageCircle, AlertCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Contact EVCarsBike - Get Help with EV Questions | EVCarsBike</title>
+        <meta name="description" content="Contact EVCarsBike for questions about electric vehicles, our tools, or data accuracy. We're here to help with your EV research and education needs." />
+        <meta name="keywords" content="contact EVCarsBike, EV support, electric vehicle questions, EV help, contact us, EV platform support" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/contact" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact EVCarsBike - Get Help with EV Questions | EVCarsBike" />
+        <meta property="og:description" content="Contact EVCarsBike for questions about electric vehicles, our tools, or data accuracy. We're here to help with your EV research and education needs." />
+        <meta property="og:url" content="https://evcarsbike.com/contact" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact EVCarsBike - Get Help with EV Questions | EVCarsBike" />
+        <meta name="twitter:description" content="Contact EVCarsBike for questions about electric vehicles, our tools, or data accuracy. We're here to help with your EV research and education needs." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">

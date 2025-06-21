@@ -1,10 +1,34 @@
-
 import Layout from "@/components/Layout";
 import { AlertTriangle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Disclaimer = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Disclaimer - EVCarsBike | Important Information & Limitations</title>
+        <meta name="description" content="Important disclaimer about EVCarsBike platform limitations, data accuracy, and user responsibilities. Read before using our EV tools and information." />
+        <meta name="keywords" content="disclaimer, EVCarsBike disclaimer, data accuracy, platform limitations, EV information disclaimer, user responsibilities" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/disclaimer" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Disclaimer - EVCarsBike | Important Information & Limitations" />
+        <meta property="og:description" content="Important disclaimer about EVCarsBike platform limitations, data accuracy, and user responsibilities. Read before using our EV tools and information." />
+        <meta property="og:url" content="https://evcarsbike.com/disclaimer" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Disclaimer - EVCarsBike | Important Information & Limitations" />
+        <meta name="twitter:description" content="Important disclaimer about EVCarsBike platform limitations, data accuracy, and user responsibilities. Read before using our EV tools and information." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         <section className="bg-white py-12 border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

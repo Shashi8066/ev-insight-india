@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { Calculator, Battery, Zap, Car, Bike } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const RangeCalculator = () => {
   const [vehicleType, setVehicleType] = useState<'car' | 'bike'>('car');
@@ -38,6 +38,30 @@ const RangeCalculator = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>EV Range Calculator - Calculate Electric Vehicle Range | EVCarsBike</title>
+        <meta name="description" content="Calculate estimated range for electric cars and bikes based on battery capacity and driving style. Free EV range calculator for Indian driving conditions." />
+        <meta name="keywords" content="EV range calculator, electric vehicle range, battery range calculator, EV efficiency calculator, electric car range, electric bike range, Indian EV range" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/range-calculator" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="EV Range Calculator - Calculate Electric Vehicle Range | EVCarsBike" />
+        <meta property="og:description" content="Calculate estimated range for electric cars and bikes based on battery capacity and driving style. Free EV range calculator for Indian driving conditions." />
+        <meta property="og:url" content="https://evcarsbike.com/range-calculator" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EV Range Calculator - Calculate Electric Vehicle Range | EVCarsBike" />
+        <meta name="twitter:description" content="Calculate estimated range for electric cars and bikes based on battery capacity and driving style. Free EV range calculator for Indian driving conditions." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">

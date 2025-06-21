@@ -1,9 +1,33 @@
-
 import Layout from "@/components/Layout";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Privacy Policy - EVCarsBike | Data Protection & Privacy</title>
+        <meta name="description" content="EVCarsBike privacy policy explaining how we protect your data, use cookies, and handle information on our electric vehicle platform. Updated December 2024." />
+        <meta name="keywords" content="privacy policy, data protection, EVCarsBike privacy, cookies policy, user data, privacy rights" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/privacy-policy" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy - EVCarsBike | Data Protection & Privacy" />
+        <meta property="og:description" content="EVCarsBike privacy policy explaining how we protect your data, use cookies, and handle information on our electric vehicle platform. Updated December 2024." />
+        <meta property="og:url" content="https://evcarsbike.com/privacy-policy" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy - EVCarsBike | Data Protection & Privacy" />
+        <meta name="twitter:description" content="EVCarsBike privacy policy explaining how we protect your data, use cookies, and handle information on our electric vehicle platform. Updated December 2024." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         <section className="bg-white py-12 border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

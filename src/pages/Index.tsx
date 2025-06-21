@@ -1,9 +1,9 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Calculator, Search, FileText, GitCompare, Zap, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const tools = [
@@ -39,6 +39,30 @@ const Index = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>EVCarsBike - Compare Electric Cars & Bikes in India | EV Directory & Range Calculator</title>
+        <meta name="description" content="Compare electric cars and bikes in India with our comprehensive EV directory, range calculator, and comparison tools. Find the best electric vehicles, calculate range, and make informed EV decisions." />
+        <meta name="keywords" content="electric cars India, electric bikes India, EV comparison, electric vehicle directory, EV range calculator, electric car prices, electric bike prices, EV reviews, electric vehicle guide, sustainable transport India" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="EVCarsBike - Compare Electric Cars & Bikes in India | EV Directory & Range Calculator" />
+        <meta property="og:description" content="Compare electric cars and bikes in India with our comprehensive EV directory, range calculator, and comparison tools. Find the best electric vehicles, calculate range, and make informed EV decisions." />
+        <meta property="og:url" content="https://evcarsbike.com/" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EVCarsBike - Compare Electric Cars & Bikes in India | EV Directory & Range Calculator" />
+        <meta name="twitter:description" content="Compare electric cars and bikes in India with our comprehensive EV directory, range calculator, and comparison tools. Find the best electric vehicles, calculate range, and make informed EV decisions." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-emerald-50 to-blue-50 py-20">

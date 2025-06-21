@@ -1,9 +1,33 @@
-
 import Layout from "@/components/Layout";
+import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Terms and Conditions - EVCarsBike | Website Usage Terms</title>
+        <meta name="description" content="EVCarsBike terms and conditions for using our electric vehicle platform. Educational use, data accuracy, and user responsibilities. Updated December 2024." />
+        <meta name="keywords" content="terms and conditions, website terms, EVCarsBike terms, user agreement, terms of use, legal terms" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/terms-and-conditions" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Terms and Conditions - EVCarsBike | Website Usage Terms" />
+        <meta property="og:description" content="EVCarsBike terms and conditions for using our electric vehicle platform. Educational use, data accuracy, and user responsibilities. Updated December 2024." />
+        <meta property="og:url" content="https://evcarsbike.com/terms-and-conditions" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms and Conditions - EVCarsBike | Website Usage Terms" />
+        <meta name="twitter:description" content="EVCarsBike terms and conditions for using our electric vehicle platform. Educational use, data accuracy, and user responsibilities. Updated December 2024." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         <section className="bg-white py-12 border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

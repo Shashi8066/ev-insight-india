@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { evVehicles } from "@/data/evData";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { GitCompare, Car, Bike, Battery, Zap, Clock, IndianRupee } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Compare = () => {
   const [vehicle1, setVehicle1] = useState('');
@@ -17,6 +17,30 @@ const Compare = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Compare Electric Cars & Bikes - Side by Side EV Comparison | EVCarsBike</title>
+        <meta name="description" content="Compare electric vehicles side-by-side. Detailed comparison of EV specifications, prices, range, battery capacity, and features for Indian electric cars and bikes." />
+        <meta name="keywords" content="compare EVs, electric vehicle comparison, EV specs comparison, electric car vs bike, EV comparison tool, side by side EV comparison, Indian EV comparison" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/compare" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Compare Electric Cars & Bikes - Side by Side EV Comparison | EVCarsBike" />
+        <meta property="og:description" content="Compare electric vehicles side-by-side. Detailed comparison of EV specifications, prices, range, battery capacity, and features for Indian electric cars and bikes." />
+        <meta property="og:url" content="https://evcarsbike.com/compare" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Compare Electric Cars & Bikes - Side by Side EV Comparison | EVCarsBike" />
+        <meta name="twitter:description" content="Compare electric vehicles side-by-side. Detailed comparison of EV specifications, prices, range, battery capacity, and features for Indian electric cars and bikes." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">

@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { evVehicles, brands, priceRanges, rangeCategories, type EVVehicle } from
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Battery, Zap, Clock, Car, Bike } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const EVDirectory = () => {
   const [typeFilter, setTypeFilter] = useState<'all' | 'car' | 'bike'>('all');
@@ -31,6 +31,30 @@ const EVDirectory = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>EV Directory India - Electric Cars & Bikes Specifications | EVCarsBike</title>
+        <meta name="description" content="Browse complete directory of electric cars and bikes in India. Compare specifications, prices, range, and features of all EVs available in the Indian market." />
+        <meta name="keywords" content="EV directory India, electric car specifications, electric bike specs, EV database India, electric vehicle list, Indian EV market, electric car models, electric bike models" />
+        <meta name="author" content="EVCarsBike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://evcarsbike.com/ev-directory" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="EV Directory India - Electric Cars & Bikes Specifications | EVCarsBike" />
+        <meta property="og:description" content="Browse complete directory of electric cars and bikes in India. Compare specifications, prices, range, and features of all EVs available in the Indian market." />
+        <meta property="og:url" content="https://evcarsbike.com/ev-directory" />
+        <meta property="og:image" content="https://evcarsbike.com/og-image.jpg" />
+        <meta property="og:site_name" content="EVCarsBike" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EV Directory India - Electric Cars & Bikes Specifications | EVCarsBike" />
+        <meta name="twitter:description" content="Browse complete directory of electric cars and bikes in India. Compare specifications, prices, range, and features of all EVs available in the Indian market." />
+        <meta name="twitter:image" content="https://evcarsbike.com/twitter-image.jpg" />
+        <meta name="twitter:site" content="@evcarsbike" />
+      </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <section className="bg-white py-12 border-b">
