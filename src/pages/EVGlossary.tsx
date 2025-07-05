@@ -159,22 +159,35 @@ const EVGlossary = () => {
           </div>
         </section>
 
-        {/* Educational Content */}
+        {/* Updated Educational Content */}
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Important EV Terms Indian Buyers Should Know</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Decode Electric Vehicle Technology for Smart Indian Buyers</h2>
             <div className="prose prose-lg text-gray-600 max-w-none">
               <p>
-                Understanding EV terminology is crucial for making informed purchase decisions in India's growing electric vehicle market. 
-                Key concepts like battery capacity (kWh), charging types, and government incentives directly impact your ownership experience.
+                Electric vehicle terminology can be overwhelming, especially when transitioning from traditional 
+                petrol vehicles. Our comprehensive glossary translates complex technical concepts into practical 
+                knowledge that directly impacts your buying decision and ownership experience in India.
               </p>
               <p>
-                Battery-related terms are most important - kWh determines range, while BMS ensures safety and longevity. 
-                Charging terminology helps you understand infrastructure compatibility and charging speeds available across India.
+                <strong>India-Specific Context:</strong> Every term in our glossary includes Indian market context. 
+                When we explain "CCS charging," we mention that Tata and MG use this standard, while "CHAdeMO" 
+                is rare in India. This localized approach helps you make decisions relevant to Indian infrastructure.
               </p>
               <p>
-                Performance terms like torque and motor power help compare vehicles, while policy terms like FAME II subsidies 
-                can significantly reduce your purchase cost. Familiarizing yourself with these terms ensures confident EV shopping.
+                <strong>Practical Impact Focus:</strong> Rather than dry technical definitions, we explain how each 
+                concept affects your daily usage. Understanding "regenerative braking" isn't just academic – 
+                it directly impacts your range in Bangalore traffic and reduces brake maintenance costs.
+              </p>
+              <p>
+                <strong>Government Policy Integration:</strong> We connect technical terms to Indian policies and 
+                incentives. Terms like "FAME II subsidy" and "PLI scheme" are crucial for understanding the 
+                total cost of EV ownership and available government benefits.
+              </p>
+              <p>
+                <strong>Emerging Technology Tracking:</strong> India's EV market evolves rapidly. We continuously 
+                update our glossary with new terms like "battery swapping," "V2G technology," and "LFP batteries" 
+                as they become relevant to Indian consumers, keeping you ahead of market trends.
               </p>
             </div>
           </div>

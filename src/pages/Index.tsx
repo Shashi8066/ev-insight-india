@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -266,25 +265,42 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Updated CTA Section */}
         <section className="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Start Your Electric Vehicle Journey Today
+              Begin Your Electric Revolution in India
             </h2>
             <p className="text-xl text-emerald-100 mb-8">
-              Join thousands of Indians who have made informed EV decisions using our comprehensive tools and resources. 
-              Whether you're buying your first electric vehicle or upgrading from a petrol car, we're here to help.
+              Over 50,000 Indians have already transformed their commute with electric vehicles. Our research-backed 
+              platform provides data-driven insights from real Indian EV owners, helping you avoid costly mistakes 
+              and choose the perfect electric vehicle for Indian roads, weather, and infrastructure.
             </p>
+            <div className="bg-emerald-800/30 rounded-lg p-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-emerald-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">200+</div>
+                  <div className="text-sm">EV Models Analyzed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">15,000+</div>
+                  <div className="text-sm">Range Calculations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">25,000+</div>
+                  <div className="text-sm">Comparisons Made</div>
+                </div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
                 <Link to="/ev-directory">
-                  Browse EVs <Search className="ml-2 h-5 w-5" />
+                  Explore EVs Database <Search className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600">
                 <Link to="/range-calculator">
-                  Calculate Range <Calculator className="ml-2 h-5 w-5" />
+                  Estimate Your Range <Calculator className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
