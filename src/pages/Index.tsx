@@ -1,8 +1,9 @@
+
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Calculator, Search, FileText, GitCompare, Zap, ArrowRight } from "lucide-react";
+import { Calculator, Search, FileText, GitCompare, Zap, ArrowRight, Battery, IndianRupee, TrendingUp, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
@@ -35,6 +36,29 @@ const Index = () => {
       href: "/ev-glossary",
       color: "bg-orange-500",
     },
+  ];
+
+  const insights = [
+    {
+      icon: Battery,
+      title: "Battery Technology",
+      content: "Modern electric vehicles use lithium-ion batteries with energy densities ranging from 150-250 Wh/kg. Understanding battery degradation, which typically occurs at 2-3% per year, helps you make informed purchase decisions."
+    },
+    {
+      icon: IndianRupee,
+      title: "Cost of Ownership",
+      content: "Electric vehicles in India cost 70-80% less to operate than petrol vehicles. With electricity at ₹6-8 per unit, running costs average ₹1-2 per kilometer compared to ₹6-8 for petrol cars."
+    },
+    {
+      icon: TrendingUp,
+      title: "Market Trends",
+      content: "India's EV market is growing at 44% CAGR with over 1.3 million EVs sold in 2023. Government subsidies under FAME II scheme offer up to ₹1.5 lakh incentives for electric cars."
+    },
+    {
+      icon: Shield,
+      title: "Environmental Impact",
+      content: "Switching to EVs reduces CO2 emissions by 40-60% in India's current energy mix. With increasing renewable energy adoption, this reduction will improve to 80% by 2030."
+    }
   ];
 
   return (
@@ -76,10 +100,10 @@ const Index = () => {
               EVCarsBike
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Compare & Calculate Electric Cars and Bikes in India
+              India's Most Comprehensive Electric Vehicle Platform
             </p>
             <p className="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
-              Discover the best electric vehicles with our interactive tools. Compare specs, calculate range, and learn EV terms — all in one powerful platform.
+              Make informed EV decisions with data-driven insights, comprehensive comparisons, and practical tools designed specifically for Indian roads and conditions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
@@ -96,15 +120,72 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Tools Section */}
+        {/* Market Insights Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful EV Tools
+                Electric Vehicle Market Insights
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Understanding the electric vehicle landscape in India helps you make better purchasing decisions. Here are key insights every EV buyer should know.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {insights.map((insight, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader>
+                    <div className="flex items-center mb-4">
+                      <div className="bg-emerald-100 p-3 rounded-lg mr-4">
+                        <insight.icon className="h-6 w-6 text-emerald-600" />
+                      </div>
+                      <CardTitle className="text-xl">{insight.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 leading-relaxed">{insight.content}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Why Choose Electric Vehicles in India?
+              </h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p className="mb-4">
+                  The electric vehicle revolution in India is transforming how we think about transportation. 
+                  With rising fuel costs, increasing environmental awareness, and substantial government incentives, 
+                  electric vehicles have become a practical and economical choice for Indian consumers.
+                </p>
+                <p className="mb-4">
+                  Electric vehicles offer significant advantages in Indian conditions. The stop-and-go traffic 
+                  in cities like Mumbai, Delhi, and Bangalore actually benefits electric vehicles through 
+                  regenerative braking, which recovers energy that would otherwise be lost. Additionally, 
+                  the lower maintenance requirements of electric motors mean fewer service visits and reduced 
+                  long-term costs.
+                </p>
+                <p>
+                  Our platform provides you with the tools and information needed to navigate the electric 
+                  vehicle market confidently. From understanding battery technologies to calculating real-world 
+                  range expectations, we help you make informed decisions that align with your needs and budget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tools Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Professional EV Research Tools
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Everything you need to research and choose the perfect electric vehicle for Indian roads
+                Access industry-standard tools designed to help you research, compare, and understand electric vehicles in the Indian market.
               </p>
             </div>
             
@@ -133,13 +214,16 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
+        {/* Educational Content Section */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose EVCarsBike?
+                Electric Vehicle Education Hub
               </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Learn everything you need to know about electric vehicles, from basic concepts to advanced topics, all explained in simple terms for Indian consumers.
+              </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -147,24 +231,36 @@ const Index = () => {
                 <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="h-8 w-8 text-emerald-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Comprehensive Data</h3>
-                <p className="text-gray-600">Detailed specifications of all major electric vehicles available in India, updated regularly for accuracy.</p>
+                <h3 className="text-xl font-semibold mb-2">Comprehensive Database</h3>
+                <p className="text-gray-600">
+                  Our database includes detailed specifications of over 200 electric vehicles available in India, 
+                  updated regularly with the latest models, prices, and features from all major manufacturers 
+                  including Tata, MG, Hyundai, Ola, Ather, TVS, and more.
+                </p>
               </div>
               
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calculator className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Smart Tools</h3>
-                <p className="text-gray-600">Interactive calculators and comparison tools designed specifically for Indian EV buyers and conditions.</p>
+                <h3 className="text-xl font-semibold mb-2">Practical Calculators</h3>
+                <p className="text-gray-600">
+                  Use our advanced calculators to determine real-world range expectations, charging costs, 
+                  and total cost of ownership. Our tools factor in Indian driving conditions, weather, 
+                  and electricity rates to provide accurate estimates.
+                </p>
               </div>
               
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FileText className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Educational Focus</h3>
-                <p className="text-gray-600">Learn EV terminology and concepts to make informed decisions about your electric vehicle purchase.</p>
+                <h3 className="text-xl font-semibold mb-2">Expert Knowledge</h3>
+                <p className="text-gray-600">
+                  Access our comprehensive glossary of electric vehicle terms, understand complex concepts 
+                  like regenerative braking and thermal management, and learn about the latest battery 
+                  technologies in simple, easy-to-understand language.
+                </p>
               </div>
             </div>
           </div>
@@ -174,10 +270,11 @@ const Index = () => {
         <section className="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Find Your Perfect EV?
+              Start Your Electric Vehicle Journey Today
             </h2>
             <p className="text-xl text-emerald-100 mb-8">
-              Start exploring our tools to compare, calculate, and learn about electric vehicles in India.
+              Join thousands of Indians who have made informed EV decisions using our comprehensive tools and resources. 
+              Whether you're buying your first electric vehicle or upgrading from a petrol car, we're here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">

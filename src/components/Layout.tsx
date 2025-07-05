@@ -96,47 +96,65 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand */}
-            <div className="col-span-1 md:col-span-2">
+            <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="bg-emerald-500 p-2 rounded-lg">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
                 <span className="text-xl font-bold">EVCarsBike</span>
               </div>
-              <p className="text-gray-400 max-w-md">
-                Compare & Calculate Electric Cars and Bikes in India. Your trusted resource for EV research and decision-making.
+              <p className="text-gray-400 max-w-md mb-4">
+                India's most comprehensive electric vehicle platform. Empowering smart EV decisions through data-driven insights and professional research tools.
+              </p>
+              <p className="text-sm text-gray-500">
+                Helping Indians transition to sustainable transportation since 2024.
               </p>
             </div>
 
-            {/* Quick Links */}
+            {/* Tools */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Tools</h3>
+              <h3 className="text-lg font-semibold mb-4">Research Tools</h3>
               <ul className="space-y-2">
                 <li><Link to="/ev-directory" className="text-gray-400 hover:text-white transition-colors">EV Directory</Link></li>
-                <li><Link to="/compare" className="text-gray-400 hover:text-white transition-colors">Compare EVs</Link></li>
+                <li><Link to="/compare" className="text-gray-400 hover:text-white transition-colors">Compare Vehicles</Link></li>
                 <li><Link to="/range-calculator" className="text-gray-400 hover:text-white transition-colors">Range Calculator</Link></li>
                 <li><Link to="/ev-glossary" className="text-gray-400 hover:text-white transition-colors">EV Glossary</Link></li>
               </ul>
             </div>
 
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+                <li><Link to="/faqs" className="text-gray-400 hover:text-white transition-colors">FAQs</Link></li>
+              </ul>
+            </div>
+
             {/* Legal */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Legal</h3>
+              <h3 className="text-lg font-semibold mb-4">Legal & Policies</h3>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
-                <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
                 <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms</Link></li>
+                <li><Link to="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
                 <li><Link to="/disclaimer" className="text-gray-400 hover:text-white transition-colors">Disclaimer</Link></li>
-                <li><Link to="/faqs" className="text-gray-400 hover:text-white transition-colors">FAQs</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2024 EVCarsBike.com. All rights reserved. Educational resource for EV comparison in India.
-            </p>
+          <div className="border-t border-gray-800 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                © 2024 EVCarsBike.com. All rights reserved. Educational platform for electric vehicle research in India.
+              </p>
+              <div className="flex space-x-4 text-sm text-gray-400">
+                <span>Made in India</span>
+                <span>•</span>
+                <span>For Indian EV Buyers</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
